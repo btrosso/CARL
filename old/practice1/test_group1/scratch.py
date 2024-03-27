@@ -5,7 +5,7 @@ import pytesseract
 
 pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
 # Open the image file directly
-image_path = 'C:/Users/Brandon/personal_code/CARL/practice/test_group1/Cars4.png'
+image_path = '/practice1/test_group1/Cars4.png'
 image = Image.open(image_path)
 
 # Convert the image to RGB mode if needed

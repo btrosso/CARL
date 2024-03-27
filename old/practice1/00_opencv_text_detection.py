@@ -12,8 +12,8 @@ import time
 import cv2
 
 
-image_path = "C:/Users/Brandon/personal_code/CARL/practice/images/Alabama.jpg"
-east_path = "C:/Users/Brandon/personal_code/CARL/practice/frozen_east_text_detection.pb"
+image_path = "/practice1/images/Alabama.jpg"
+east_path = "/practice1/frozen_east_text_detection.pb"
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()

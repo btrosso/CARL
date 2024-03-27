@@ -1,3 +1,4 @@
+# https://pyimagesearch.com/2020/09/21/opencv-automatic-license-number-plate-recognition-anpr-with-python/
 # import the necessary packages
 from skimage.segmentation import clear_border
 import pytesseract

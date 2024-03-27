@@ -4,7 +4,7 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
 
 # Load the image
-image_path = 'C:/Users/Brandon/personal_code/CARL/practice/test_group1/Cars27.png'
+image_path = '/practice1/test_group1/Cars27.png'
 image = cv2.imread(image_path)
 
 # Display the image

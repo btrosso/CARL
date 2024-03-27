@@ -1,3 +1,4 @@
+# https://pyimagesearch.com/2020/09/21/opencv-automatic-license-number-plate-recognition-anpr-with-python/
 # import the necessary packages
 from anpr_class import PyImageSearchANPR
 from imutils import paths
@@ -9,7 +10,7 @@ import cv2
 # image_path = "C:/Users/Brandon/personal_code/CARL/practice/images/Alabama.jpg"
 # east_path = "C:/Users/Brandon/personal_code/CARL/practice/frozen_east_text_detection.pb"
 
-image_input_path = "C:/Users/Brandon/personal_code/CARL/practice/test_group1/"
+image_input_path = "/practice1/test_group1/"
 debug = 1  # 1 for yes | -1 for no
 clear_border = -1  # 1 for yes | -1 for no - this is what it started as
 
