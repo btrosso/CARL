@@ -1,0 +1,12 @@
+Here is a typical workflow for pushing code and tagging a release:
+
+1. Complete Development: Finish writing and testing your code changes locally.
+2. Commit Changes: Use git add . to stage all changes and git commit -m "Message" to commit them with a
+    descriptive message.
+3. Tag the Release: Create a tag using git tag v1.0 (replace v1.0 with your desired tag name).
+4. Push Changes: Push your changes to the remote repository using git push origin branch-name (replace branch-name
+    with your branch name, e.g., main or master).
+5. Push Tags: After pushing the code changes, push the tags to the remote repository using git push --tags.
+
+
+https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases

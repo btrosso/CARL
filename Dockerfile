@@ -1,17 +1,17 @@
-# Use an official Python runtime as the base image
-FROM python:3.9-slim
+# Use an official Python runtime as a parent image
+FROM python:3.11
 
-# Set the working directory inside the container
-WORKDIR /app
+# Set the working directory in the container
+WORKDIR /CARL/
 
-# Copy the requirements file to the working directory
+# Copy the requirements.txt file into the container at /CARL/
 COPY requirements.txt .
 
 # Install any dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy your ANPR-related Python code and files into the container
+# Copy the rest of the application code into the container at /app
 COPY . .
 
-# Command to run your ANPR application
-CMD ["python", "your_anpr_script.py"]
+# Set the command to run your application
+CMD ["python", "Core.py"]
