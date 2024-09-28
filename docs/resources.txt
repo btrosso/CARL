@@ -1,0 +1,15 @@
+Official Vehicle Classification Diagram:
+https://www.fhwa.dot.gov/policyinformation/tmguide/tmg_2022/Appendix-A-Vehicle-Types.pdf
+
+Vehicle Type Recognition Dataset (images):
+https://www.kaggle.com/datasets/kaggleashwin/vehicle-type-recognition
+
+Stanford Cars Dataset (images):
+https://www.kaggle.com/datasets/eduardo4jesus/stanford-cars-dataset
+
+Vehicle Dataset 3 (images):
+https://www.kaggle.com/datasets/krishrana/vehicle-dataset
+
+UK Truck Brands Dataset (images):
+
+Construction Vehicle Images (images):

@@ -1,7 +1,8 @@
 OUTPUT
 IMAGES
-\old
+\data
 \test
 \env
 \.idea
 \__pycache__
+*.pth
