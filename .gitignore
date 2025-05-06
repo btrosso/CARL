@@ -9,3 +9,4 @@ IMAGES
 *.pt
 yolo_annotations/
 yt_traffic_high_quality
+vehicle_axle_dataset/
