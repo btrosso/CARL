@@ -23,7 +23,8 @@ model.fc = nn.Linear(model.fc.in_features, 2)  # 2 classes: truck and non-truck
 model = model.to(device)
 
 # Load the saved model weights
-model.load_state_dict(torch.load('C:/Users/btros/Documents/GitHub/CARL/resnet/best_truck_classifier3.pth'))
+model_weights_path = 'C:/Users/btros/Documents/GitHub/CARL/resnet/model_weights/'
+model.load_state_dict(torch.load(f'{model_weights_path}best_truck_classifier5.pth'))
 
 # Set the model to evaluation mode
 model.eval()

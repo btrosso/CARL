@@ -6,3 +6,6 @@ IMAGES
 \.idea
 \__pycache__
 *.pth
+*.pt
+yolo_annotations/
+yt_traffic_high_quality

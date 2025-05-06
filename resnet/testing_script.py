@@ -25,7 +25,7 @@ test_loader = DataLoader(test_data, batch_size=16, shuffle=False)
 # Load the trained model
 model = models.resnet18(pretrained=False)
 model.fc = nn.Linear(model.fc.in_features, 2)  # 2 classes: truck and non-truck
-model.load_state_dict(torch.load('C:/Users/btros/Documents/GitHub/CARL/resnet/best_truck_classifier3.pth'))  # Load saved model
+model.load_state_dict(torch.load('./model_weights/best_truck_classifier8.pth'))  # Load saved model
 model = model.to(device)
 model.eval()  # Set the model to evaluation mode
 
@@ -38,6 +38,7 @@ with torch.no_grad():
         inputs, labels = inputs.to(device), labels.to(device)
         outputs = model(inputs)
         _, predicted = torch.max(outputs, 1)
+        print(predicted)
         test_total += labels.size(0)
         test_correct += (predicted == labels).sum().item()
 

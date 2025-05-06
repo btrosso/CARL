@@ -45,16 +45,17 @@ model = model.to(device)
 
 # Define loss and optimizer
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(model.parameters(), lr=0.0001)
+optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 # Checkpoint directory
 checkpoint_dir = 'checkpoints'
 os.makedirs(checkpoint_dir, exist_ok=True)
 
 # Training loop
-num_epochs = 10
+num_epochs = 5
 best_val_accuracy = 0.0
-final_model_path = 'best_truck_classifier3.pth'
+file_name = 'best_truck_classifier5.pth'
+final_model_path = f'C:/Users/btros/Documents/GitHub/CARL/resnet/model_weights/{file_name}'
 
 for epoch in range(num_epochs):
     model.train()  # Set model to training mode
