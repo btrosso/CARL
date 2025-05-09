@@ -8,5 +8,6 @@ IMAGES
 *.pth
 *.pt
 yolo_annotations/
-yt_traffic_high_quality
+yt_traffic_high_quality/
 vehicle_axle_dataset/
+algotraffic_low_qual/
