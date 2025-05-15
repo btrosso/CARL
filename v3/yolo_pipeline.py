@@ -37,8 +37,8 @@ def evaluate_yolov8_model(
 
 def predict_yolov8_model(
     model_path='/Users/brosso/Documents/personal_code/CARL/v3/runs/train/vehicle_axle_v22/weights/best.pt',
-    source_dir='/Users/brosso/Documents/personal_code/CARL/algotraffic_low_qual/05142025',
-    # source_dir='/Users/brosso/Documents/personal_code/CARL/v3/vehicle_axle_dataset/images/val',
+    # source_dir='/Users/brosso/Documents/personal_code/CARL/algotraffic_low_qual/05142025',
+    source_dir='/Users/brosso/Documents/personal_code/CARL/v3/vehicle_axle_dataset/images/val',
     save_dir='runs/predict',
     conf_threshold=0.25  # 👈 Default confidence threshold
 ):
@@ -56,10 +56,10 @@ def predict_yolov8_model(
 
 if __name__ == "__main__":
     # Train:
-    train_yolov8_model()
+    # train_yolov8_model()
 
     # Evaluate:
     # evaluate_yolov8_model()
 
     # Predict and save annotated results:
-    # predict_yolov8_model()
+    predict_yolov8_model()
