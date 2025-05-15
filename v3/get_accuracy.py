@@ -72,8 +72,12 @@ def evaluate_yolo_accuracy(gt_dir, pred_dir):
 """
 RESULTS:
 v16 ~ 80.67%
-v17 ~ 83.??&
+v17 ~ 83.52%
 v18 ~ 79.72%
+v19 ~ 78.10%
+v20 ~ 83.66%
+v21 ~ 82.45%
+v22 ~ 83.79%
 """
 
 if __name__ == "__main__":

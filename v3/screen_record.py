@@ -9,7 +9,7 @@ width = 1250
 height = 650
 fps = 30
 
-output_path = os.path.expanduser("~/Documents/screen_recordings/output3.mp4")
+output_path = os.path.expanduser("~/Documents/screen_recordings/05142025.mp4")
 
 # Build ffmpeg command
 cmd = [

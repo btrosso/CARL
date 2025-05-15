@@ -45,7 +45,7 @@ def split_yolo_dataset(images_dir, annotations_dir, output_dir, val_split=0.2, s
 
 if __name__ == "__main__":
     result = split_yolo_dataset(
-        "/Users/brosso/Documents/personal_code/CARL/algotraffic_low_qual", 
+        "/Users/brosso/Documents/personal_code/CARL/algotraffic_low_qual/05142025", 
         "/Users/brosso/Documents/personal_code/CARL/yolo_annotations", 
         "vehicle_axle_dataset"
         )
