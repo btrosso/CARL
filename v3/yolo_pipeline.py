@@ -10,7 +10,7 @@ def train_yolov8_model(
     imgsz=640,
     batch=8,  #16
     project='runs/train',
-    name='vehicle_axle_v23'
+    name='vehicle_axle_v24'
 ):
     LOGGER.setLevel("INFO")
     print("🟡 Starting YOLOv8 training on CPU...")
@@ -36,9 +36,9 @@ def evaluate_yolov8_model(
     return metrics
 
 def predict_yolov8_model(
-    model_path='/Users/brosso/Documents/personal_code/CARL/v3/runs/train/vehicle_axle_v22/weights/best.pt',
-    # source_dir='/Users/brosso/Documents/personal_code/CARL/algotraffic_low_qual/05142025',
-    source_dir='/Users/brosso/Documents/personal_code/CARL/v3/vehicle_axle_dataset/images/val',
+    model_path='/Users/brosso/Documents/personal_code/CARL/v3/runs/train/vehicle_axle_v24/weights/best.pt',
+    source_dir='/Users/brosso/Documents/personal_code/CARL/yt_traffic_high_quality/yt3_pt1',
+    # source_dir='/Users/brosso/Documents/personal_code/CARL/v3/vehicle_axle_dataset/images/val',
     save_dir='runs/predict',
     conf_threshold=0.25  # 👈 Default confidence threshold
 ):
@@ -47,7 +47,7 @@ def predict_yolov8_model(
         source=source_dir,
         save=True,
         save_txt=True,
-        conf=0.40,   # 👈 Adjust threshold here
+        conf=0.25,   # 👈 Adjust threshold here
         project=save_dir
     )
     return results

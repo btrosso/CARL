@@ -7,7 +7,7 @@ def isolate_high_class_predictions(
     source_images_dir,
     output_labels_dir,
     output_images_dir,
-    class_threshold=4
+    class_threshold=1
 ):
     pred_labels_dir = Path(pred_labels_dir)
     source_images_dir = Path(source_images_dir)
@@ -25,7 +25,7 @@ def isolate_high_class_predictions(
 
         for line in lines:
             class_id = int(line.strip().split()[0])
-            if class_id > class_threshold:
+            if class_id == class_threshold:
                 # Move label
                 dest_label_path = output_labels_dir / label_file.name
                 shutil.move(str(label_file), str(dest_label_path))
@@ -35,7 +35,7 @@ def isolate_high_class_predictions(
                 src_img_path = source_images_dir / image_name
                 if src_img_path.exists():
                     dest_img_path = output_images_dir / image_name
-                    shutil.copy(src_img_path, dest_img_path)
+                    shutil.move(src_img_path, dest_img_path)
                     moved_count += 1
                 break  # No need to check more lines in this file
 
@@ -44,7 +44,7 @@ def isolate_high_class_predictions(
 if __name__ == "__main__":
     isolate_high_class_predictions(
         pred_labels_dir="/Users/brosso/Documents/personal_code/CARL/v3/runs/predict/predict/labels",
-        source_images_dir="/Users/brosso/Documents/personal_code/CARL/algotraffic_low_qual/05142025",
-        output_labels_dir="/Users/brosso/Documents/personal_code/CARL/v3/runs/ISOLATE/labels",
-        output_images_dir="/Users/brosso/Documents/personal_code/CARL/v3/runs/ISOLATE/images"
+        source_images_dir="/Users/brosso/Documents/personal_code/CARL/yt_traffic_high_quality/yt2_r1",
+        output_labels_dir="/Users/brosso/Documents/personal_code/CARL/v3/runs/ISOLATE/labels/yt2_r1",
+        output_images_dir="/Users/brosso/Documents/personal_code/CARL/v3/runs/ISOLATE/images/yt2_r1"
     )

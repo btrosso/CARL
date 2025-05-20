@@ -9,7 +9,12 @@ width = 1250
 height = 650
 fps = 30
 
-output_path = os.path.expanduser("~/Documents/screen_recordings/05142025.mp4")
+output_path = os.path.expanduser("~/Documents/screen_recordings/05172025_algo.mp4")
+"""
+https://www.youtube.com/watch?v=BVS3GELeU3k  
+video pt1: start: 00:00 | stopped at 24:17
+video pt2: start: 24:18 | stopped at 57:43
+"""
 
 # Build ffmpeg command
 cmd = [
