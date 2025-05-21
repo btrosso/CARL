@@ -11,3 +11,8 @@ print(f"Num Train Files: {len(train_files)}")
 
 val_files = os.listdir("/Users/brosso/Documents/personal_code/CARL/v3/vehicle_axle_dataset/images/val")
 print(f"Num Validation Files: {len(val_files)}")
+
+print("----\n")
+
+algo_imgs2 = os.listdir("/Users/brosso/Documents/personal_code/CARL/algotraffic_low_qual/05142025")
+print(f"Num Algo Imgs 05142025 Files: {len(algo_imgs2)}")
