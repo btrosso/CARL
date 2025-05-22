@@ -5,12 +5,12 @@ from ultralytics.utils import LOGGER
 
 def train_yolov8_model(
     model_size='yolov8n.pt',
-    data_yaml='/Users/brosso/Documents/personal_code/CARL/v3/vehicle_axle_dataset/data.yaml',
+    data_yaml='/media/ssdset/users/brosso/workspace/CARL/v3/vehicle_axle_dataset/data.yaml',
     epochs=15,  #50
     imgsz=640,
     batch=8,  #16
     project='runs/train',
-    name='vehicle_axle_v26'
+    name='vehicle_axle_v28'
 ):
     LOGGER.setLevel("INFO")
     print("🟡 Starting YOLOv8 training on CPU...")
@@ -20,7 +20,7 @@ def train_yolov8_model(
         epochs=epochs,
         imgsz=imgsz,
         batch=batch,
-        device="cpu",  # change this is / when i have a gpu
+        device="0",  # change this if / when i have a gpu
         project=project,
         name=name
     )
@@ -36,9 +36,9 @@ def evaluate_yolov8_model(
     return metrics
 
 def predict_yolov8_model(
-    model_path='/Users/brosso/Documents/personal_code/CARL/v3/runs/train/vehicle_axle_v24/weights/best.pt',
-    source_dir='/Users/brosso/Documents/personal_code/CARL/algotraffic_low_qual/05142025',
-    # source_dir='/Users/brosso/Documents/personal_code/CARL/v3/vehicle_axle_dataset/images/val',
+    model_path='/media/ssdset/users/brosso/workspace/CARL/v3/runs/train/vehicle_axle_v28/weights/best.pt',
+    # source_dir='/Users/brosso/Documents/personal_code/CARL/algotraffic_low_qual/05142025',
+    source_dir='/media/ssdset/users/brosso/workspace/CARL/v3/vehicle_axle_dataset/images/val',
     save_dir='runs/predict',
     conf_threshold=0.25  # 👈 Default confidence threshold
 ):
@@ -47,7 +47,7 @@ def predict_yolov8_model(
         source=source_dir,
         save=True,
         save_txt=True,
-        conf=0.60,   # 👈 Adjust threshold here  .25 for accuracy test | .60 for inference / annotation pipeline
+        conf=0.25,   # 👈 Adjust threshold here  .25 for accuracy test | .60 for inference / annotation pipeline
         project=save_dir
     )
     return results
@@ -56,10 +56,10 @@ def predict_yolov8_model(
 
 if __name__ == "__main__":
     # Train:
-    train_yolov8_model()
+    # train_yolov8_model()
 
     # Evaluate:
     # evaluate_yolov8_model()
 
     # Predict and save annotated results:
-    # predict_yolov8_model()
+    predict_yolov8_model()

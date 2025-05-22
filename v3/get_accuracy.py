@@ -81,10 +81,11 @@ v22 ~ 83.79%
 v23 ~ 85.71%
 v24 ~ 85.82%
 v25 ~ 87.58%
+v28 ~ 89.38%
 """
 
 if __name__ == "__main__":
     evaluate_yolo_accuracy(
-        gt_dir="/Users/brosso/Documents/personal_code/CARL/v3/vehicle_axle_dataset/labels/val",
-        pred_dir="/Users/brosso/Documents/personal_code/CARL/v3/runs/predict/predict/labels"  # adjust if different
+        gt_dir="/media/ssdset/users/brosso/workspace/CARL/v3/vehicle_axle_dataset/labels/val",
+        pred_dir="/media/ssdset/users/brosso/workspace/CARL/v3/runs/predict/predict/labels"  # adjust if different
     )
