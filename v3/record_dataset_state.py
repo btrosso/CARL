@@ -24,6 +24,9 @@ def process_dataset(dataset_root, output_csv):
                 # print(filename)
                 if filename == "data.yaml":
                     continue
+                
+                if ".cache" in filename:
+                    continue
 
                 full_path = os.path.join(dirpath, filename)
                 # print(full_path)
