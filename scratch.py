@@ -6,10 +6,10 @@ import os
 # image_files = os.listdir("/media/ssdset/users/brosso/workspace/CARL/yt_traffic_high_quality/yt1_r2")
 # print(f"Num YT1_R2 Image Files: {len(image_files)}")
 
-train_files = os.listdir("/media/ssdset/users/brosso/workspace/CARL/v3/vehicle_axle_dataset/images/train")
+train_files = os.listdir("/Users/brosso/Documents/personal_code/CARL/v3/vehicle_axle_dataset/images/train")
 print(f"Num Train Files: {len(train_files)}")
 
-val_files = os.listdir("/media/ssdset/users/brosso/workspace/CARL/v3/vehicle_axle_dataset/images/val")
+val_files = os.listdir("/Users/brosso/Documents/personal_code/CARL/v3/vehicle_axle_dataset/images/val")
 print(f"Num Validation Files: {len(val_files)}")
 
 print("----\n")
@@ -27,7 +27,7 @@ def get_folder_size(folder_path):
             total_size += os.path.getsize(file_path)
     return total_size
 
-folder_path = "/media/ssdset/users/brosso/workspace/CARL/v3/vehicle_axle_dataset/images" # Replace with the actual path to the folder
+folder_path = "/Users/brosso/Documents/personal_code/CARL/v3/vehicle_axle_dataset/images/train" # Replace with the actual path to the folder
 size_in_bytes = get_folder_size(folder_path)
 
 # Convert to more readable units (optional)

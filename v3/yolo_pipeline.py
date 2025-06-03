@@ -36,8 +36,8 @@ def evaluate_yolov8_model(
     return metrics
 
 def predict_yolov8_model(
-    model_path='/Users/brosso/Documents/personal_code/CARL/v3/runs/train/vehicle_axle_v28/weights/best.pt',
-    source_dir='/Users/brosso/Documents/personal_code/CARL/algotraffic_low_qual/05222025_pt3',
+    model_path='/Users/brosso/Documents/personal_code/CARL/v3/runs/train/vehicle_axle_v29/weights/best.pt',
+    source_dir='/Users/brosso/Documents/personal_code/CARL/algotraffic_low_qual/05282025_pt1',
     # source_dir='/media/ssdset/users/brosso/workspace/CARL/v3/vehicle_axle_dataset/images/val',
     save_dir='runs/predict',
     conf_threshold=0.25  # 👈 Default confidence threshold
@@ -47,7 +47,7 @@ def predict_yolov8_model(
         source=source_dir,
         save=True,
         save_txt=True,
-        conf=0.60,   # 👈 Adjust threshold here  .25 for accuracy test | .60 for inference / annotation pipeline
+        conf=0.70,   # 👈 Adjust threshold here  .25 for accuracy test | .60 for inference / annotation pipeline
         project=save_dir
     )
     return results

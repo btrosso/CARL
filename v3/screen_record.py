@@ -9,7 +9,7 @@ width = 1250
 height = 650
 fps = 30
 
-output_path = os.path.expanduser("~/Documents/screen_recordings/05172025_algo.mp4")
+output_path = os.path.expanduser("~/Documents/screen_recordings/05282025_algo_pt1.mp4")
 """
 https://www.youtube.com/watch?v=BVS3GELeU3k  
 video pt1: start: 00:00 | stopped at 24:17
